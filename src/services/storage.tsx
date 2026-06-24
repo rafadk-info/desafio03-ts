@@ -1,8 +1,10 @@
-interface IDIoBank {
+interface IDioBank {
     login: boolean;
+    name?: string;
+    email?: string;
 }
 
-const dioBank = {
+const dioBank: IDioBank = {
     login: false
 }
 
@@ -14,6 +16,6 @@ export const createLocalStorage = (): void => {
     localStorage.setItem('diobank', JSON.stringify(dioBank))
 }
 
-export const changeLocalStorage = (dioBank: IDIoBank): void => {
+export const changeLocalStorage = (dioBank: IDioBank): void => {
     localStorage.setItem('diobank', JSON.stringify(dioBank))
 }
